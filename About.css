@@ -1,0 +1,90 @@
+  body{
+    background-image: linear-gradient(to bottom, #343637, #75797C );
+    margin: 0;
+    top: 0;
+  }
+
+   .text-layer-1 {
+position: absolute;
+  top: 20px;
+  left: 20px;
+  color: blue;
+  font-size: 2em;
+  z-index: 1;
+}
+
+.text-layer-2 {
+position: absolute;
+  top: 20px;
+  left: 20px; 
+  color: red;
+  font-size: 20px;
+  z-index: 2; 
+}
+
+  nav{
+    background-color: black;
+    position:absolute;
+    height: 100vh;
+    width: 220px;
+  }
+
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    
+}
+nav ul a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+  color: blue;
+}
+
+nav ul a:active{
+    color: blue;
+}
+
+nav img {
+padding: 15px 50px;
+border-radius: 50%;
+height: 120px;
+width: 120px;
+margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 3px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-left: 30px;
+
+    
+}
+
+.social-icons a:hover {
+    color:cadetblue; /* Change color on hover */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:start;
+    color: white;
+    font-size:xx-large;
+    
+  }

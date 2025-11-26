@@ -1,0 +1,114 @@
+   body {
+   top: 0;
+   margin: 0;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 1500px 2100px;
+   }
+   
+   p{
+    color: white;
+    text-align: center;
+   }
+
+  .name{
+    margin:0 50px;
+    
+    color: white;
+    font-size: x-large;
+    justify-content: flex-start;
+    
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    padding-top: 30px;
+    font-size:xx-large;
+    
+  }
+
+   main button{
+   color: white;
+   border-width: 5px;
+    border-radius: 60px;
+    border-color: white;
+    font-size: large;
+    background: transparent;
+    width: 120px;
+    height: 40px;
+   
+  }
+
+   main button:hover{
+    border-color: black;
+    color: black;
+    background-color: white;
+   }
+
+   main h1{
+    margin-top: 5px;
+   }
+
+   main h5{
+    margin-bottom: 30px;
+   }
+
+   nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+nav img {
+padding: 15px 50px;
+border-radius: 50%;
+height: 120px;
+width: 120px;
+margin-bottom: 20px;
+}
+
+nav{
+    background-color: black;
+    position:absolute;
+    height: 100vh;
+    width: 220px;
+    
+}
+
+nav ul a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+  color: blue;
+}
+
+nav ul a:active{
+    color: blue;
+}
+
+.social-icons a {
+    margin: 0 3px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-left: 30px;
+}
+
+.social-icons a:hover {
+    color:cadetblue; 
+}
