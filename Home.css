@@ -33,6 +33,7 @@
 
    main button{
    color: white;
+   text-decoration: none;
    border-width: 5px;
     border-radius: 60px;
     border-color: white;
@@ -40,13 +41,12 @@
     background: transparent;
     width: 120px;
     height: 40px;
-   
   }
 
    main button:hover{
-    border-color: black;
-    color: black;
+    color: rgb(0, 0, 0);
     background-color: white;
+    border-color: black;
    }
 
    main h1{
@@ -67,7 +67,7 @@
     font-weight: bold;
     font-size:x-large;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 
 }
 
@@ -81,7 +81,7 @@ margin-bottom: 20px;
 
 nav{
     background-color: black;
-    position:absolute;
+    position:fixed;
     height: 107vh;
     width: 220px;
     

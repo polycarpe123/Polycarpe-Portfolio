@@ -1,0 +1,191 @@
+body{
+    background-color:cornsilk;
+    top: 0;
+    margin: 0;
+}
+
+.text-wrapper {
+  margin-left: 650px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Big text behind */
+.big-text {
+  font-size: 100px;       /* make it large */
+  font-weight: 800;
+  color: #000000;         /* light color for background effect */
+  position: relative;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+/* Smaller text in the center */
+.small-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;        /* adjust as needed */
+  font-weight: 800;
+  color: black;           /* front color */
+  z-index: 2;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+}
+.underline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px; /* adjust to sit under the big word */
+  width: calc(100% - 50%); /* controls underline width relative to big word */
+  height: 4px;
+  background: rgb(0, 0, 0);
+  z-index: 0;
+}
+
+nav{
+    background-color: black;
+    position:fixed;
+    height: 107vh;
+    width: 220px;
+  }
+
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+    margin-top: 20px;
+    margin-bottom: 80px; 
+}
+
+nav ul a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+  color: blue;
+}
+
+nav ul a:active{
+    color: blue;
+}
+
+nav img {
+padding: 15px 50px;
+border-radius: 50%;
+height: 120px;
+width: 120px;
+margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 3px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-left: 30px;
+}
+
+.social-icons a:hover {
+    color:cadetblue; /* Change color on hover */
+}
+
+main{
+    margin-left: 250px;
+  }
+
+  .skills-section {
+    margin-top: 15px; /* leave space for the title */
+    margin-left: 100px; /* account for your sidebar */
+    padding: 2rem;
+    color: white;
+}
+
+/* Row of 2 Cards */
+.skills-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #0f0f0f;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 48%;
+    max-width: 360px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.skill-card h3 {
+    margin-bottom: 1.2rem;
+}
+
+/* Progress Bars */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #0e6b57;
+}
+
+/* Custom widths based on the image */
+.figma { width: 70%; }
+.canva { width: 80%; }
+.framer { width: 50%; }
+
+.html { width: 70%; }
+.css { width: 60%; }
+.js { width: 40%; }
+
+/* Tools Section */
+.tools-card {
+    background: #0f0f0f;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    max-width: 550px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.tools-card h3 {
+    margin-bottom: 1rem;
+}
+
+.tools-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+}
+
+.tools-logos img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 900px) {
+    .skills-section {
+        margin-left: 0; /* sidebar collapses on mobile */
+    }
+}

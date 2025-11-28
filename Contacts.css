@@ -1,8 +1,8 @@
-  body{
+body{
     background-color:cornsilk;
-    margin: 0;
     top: 0;
-  }
+    margin: 0;
+}
 
 .text-wrapper {
   margin-left: 550px;
@@ -44,9 +44,9 @@
   z-index: 0;
 }
 
-  nav{
+nav{
     background-color: black;
-    position:fixed;
+    position:absolute;
     height: 107vh;
     width: 220px;
   }
@@ -62,9 +62,9 @@
     font-weight: bold;
     font-size:x-large;
     margin-top: 20px;
-    margin-bottom: 80px;
-    
+    margin-bottom: 80px; 
 }
+
 nav ul a{
     color: aliceblue;
     text-decoration: none;
@@ -93,85 +93,86 @@ margin-bottom: 20px;
     text-decoration: none;
     transition: color 0.3s;
     padding-left: 30px;
-
-    
 }
 
 .social-icons a:hover {
     color:cadetblue; /* Change color on hover */
 }
-
 main{
-  margin-left: 250px;
-    height: 100%;
+    padding: 50px;
+    margin-left: 250px;
+}
+/* Contact Container */
+.contact-container {
   display: flex;
-  align-items: center;      /* vertical centering */
-  padding: 40px;   
-  }
+  max-width: 1000px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  .paragraphs {
-  margin-top: 30px;
+.contact-left, .contact-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+.contact-left {
+  font-size: larger;
+  font-weight: bold;
+  background-color: dimgrey;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;    
-  font-size: 24px;      /* adjust as needed */
-  padding-right: 100px;
-  margin-left: 100px;
+  justify-content:baseline;
+}
+
+.contact-left h2 {
+  margin-bottom: 1rem;
   font-weight: bolder;
 }
 
-.paragraph-1{
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s; /* smooth hover effect */
-  text-align: center;
-
-
+.contact-left p {
+  margin-bottom: 0.5rem;
 }
 
-.paragraph-2{
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s; /* smooth hover effect */
-  text-align: center;
-
+.contact-right h2 {
+  margin-bottom: 1rem;
+  color: #000000;
 }
 
-.picture {
-  width: 30%;
-  padding-top: 40px;
+.contact-right form {
+  display: flex;
+  flex-direction: column;
 }
 
-.picture img {
+.contact-right input, 
+.contact-right textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
   width: 100%;
-  height: 350px;
-  object-fit: cover;  /* crops the image */
-  border-radius: 20px;
-  box-shadow: 0px 4px 100px rgba(0,0,0,0.15);
 }
 
-main button{
-  align-items: center;
-  position: fixed;
-  left: 700px;
-  bottom: 80px;
+.contact-right textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-right button {
+  padding: 0.8rem;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  border-radius: 10px;
+  border-width: 5px;
+  cursor: pointer;
+  border-color: #000000;
+  transition: background-color 0.3s ease;
+}
+
+.contact-right button:hover {
   background-color: #000000;
   color: white;
-  border-radius: 20px;
-  border-width: 0;
-  font-size: larger;
-  width: 200px;
-  height:50px;
-}
-
-main button:hover{
-  color: black;
-  background-color: white;
-  transition: 200ms;
-
+  border-color: white;
 }
