@@ -6,7 +6,260 @@
     <link rel="stylesheet" type="text/css" href="/_home.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
+<style>
+    /* ================================
+   GLOBAL
+================================ */
+body {
+    margin: 0;
+    background: url("211080.jpg") center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
+
+/* ================================
+   DESKTOP SIDEBAR
+================================ */
+.sidebar {
+    background: black;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    display: block;
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: cadetblue;
+}
+
+.social-icons {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: cadetblue;
+}
+
+.brand {
+    color: white;
+    margin: 10px 0 20px;
+}
+
+
+/* ================================
+   MOBILE HEADER
+================================ */
+.mobile-header {
+    display: none;
+}
+
+
+/* ================================
+   HEADING WITH OVERLAY TEXT
+================================ */
+.text-wrapper {
+    margin-left: 250px;
+    text-align: center;
+    margin-top: 90px;
+    position: relative;
+}
+
+.big-text {
+    font-size: 100px;
+    font-weight: 800;
+    opacity: 0.28;
+    color: white;
+}
+
+.small-text {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.underline {
+    width: 200px;
+    height: 5px;
+    background: white;
+    margin: -15px auto 0;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+.home-content {
+    margin-left: 250px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.tagline {
+    font-size: 28px;
+}
+
+.designer-tag {
+    background: black;
+    padding: 12px 28px;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+.location {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.hire-btn {
+    margin-top: 25px;
+    padding: 12px 26px;
+    border: 2px solid white;
+    border-radius: 40px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+}
+
+.hire-btn:hover {
+    background: white;
+    color: black;
+}
+
+
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+@media (max-width: 900px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    /* MOBILE NAV */
+    .mobile-header {
+        display: flex;
+        background: black;
+        width: 100%;
+        height: 70px;
+        align-items: center;
+        padding: 0 15px;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .mobile-profile {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+    }
+
+    .hamburger {
+        width: 28px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        background: white;
+    }
+
+    .mobile-nav-links {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        width: 80%;
+        background: black;
+        text-align: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .mobile-nav-links a {
+        color: white;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+    }
+
+    .mobile-nav-links.show {
+        display: flex;
+    }
+
+    .text-wrapper,
+    .home-content {
+        margin-left: 0;
+        padding-top: 120px;
+    }
+
+    .big-text {
+        font-size: 70px;
+    }
+
+    .small-text {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .big-text {
+        font-size: 55px;
+    }
+    .small-text {
+        font-size: 20px;
+    }
+}
+
+</style>
 <body>
 
     <!-- ========== SIDEBAR (DESKTOP) ========== -->
