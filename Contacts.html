@@ -1,58 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Contacts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <title>Contacts</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacts - Polycarpe</title>
+  <link rel="stylesheet" href="Contacts.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-    <body>
-    <nav> 
-        <img src="/Filter photo.png" alt=""/>
-        <ul>
-            <li> <a href="Home.html">Home</a></li>
-            <li> <a href="About.html">About</a></li>
-            <li> <a href="Projects.html">Projects</a></li>
-            <li> <a href="Skills.html">Skills</a></li>
-            <li> <a href="Experience.html">Experience</a></li>
-            <li> <a href="Blog.html">Blog</a></li>
-            <li> <a style="color: cadetblue;" href="Contacts.html">Contacts</a></li>
-        </ul>
+<body>
 
-        <div class="social-icons">
-    <a href=""><i class="fab fa-facebook-f"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin-in"></i></a>
-</div>
-    </nav>
-            <div class="text-wrapper">
-  <span class="big-text">CONTACTS</span>
-  <span class="small-text">Get In Touch</span>
-  <span class="underline"></span>
-</div>
-    <main class="content">
-  <div class="contact-container">
-    <!-- Left Half -->
-    <div class="contact-left">
-      <h2>ADDRESS:</h2>
-      <p><i class="fa-solid fa-location-dot"></i> &nbsp; KN145ST, Kigali <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nyarugenge,Kigali</p>
-      <p><i class="fa-solid fa-phone"></i> &nbsp; +250 789 915 5044</p>
-      <p><i class="fa-solid fa-envelope"></i> &nbsp; polycarpetuyishime@gmail.com</p>
+  <!-- DESKTOP SIDEBAR -->
+  <nav class="sidebar">
+    <img src="Filter photo.png" alt="Profile" class="sidebar-photo" />
+    <h4 class="brand">POLYCARPE</h4>
+
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Skills.html">Skills</a></li>
+      <li><a href="Experience.html">Experience</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li><a class="active" href="Contacts.html">Contacts</a></li>
+    </ul>
+
+    <div class="sidebar-socials">
+      <a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </nav>
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <div class="mobile-left">
+      <img src="Filter photo.png" alt="Profile" class="mobile-photo"/>
+      <span class="brand">POLYCARPE</span>
     </div>
 
-    <!-- Right Half -->
-    <div class="contact-right">
-      <h2>CONTACT ME:</h2>
-      <form>
-        <input type="text" name="name" placeholder="Name:" required>
-        <input type="email" name="email" placeholder="Email:" required>
-        <textarea name="message" placeholder="Type Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <button id="hamburger" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAV (hidden by default, toggled by JS) -->
+  <ul class="mobile-nav-links" id="mobileNav" aria-hidden="true">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Projects.html">Projects</a></li>
+    <li><a href="Skills.html">Skills</a></li>
+    <li><a href="Experience.html">Experience</a></li>
+    <li><a href="Blog.html">Blog</a></li>
+    <li><a class="active" href="Contacts.html">Contacts</a></li>
+  </ul>
+
+ 
+  <section class="page-title">
+    <h1>CONTACTS</h1>
+    <p>Get In Touch</p>
+  </section>
+
+
+  <main class="contact-section" id="contacts">
+    <div class="contact-container">
+
+      <!-- LEFT -->
+      <aside class="contact-left">
+        <h2>Address</h2>
+        <p><i class="fa-solid fa-location-dot"></i> KN145ST, Nyarugenge, Kigali</p>
+        <p><i class="fa-solid fa-phone"></i> +250 789 915 504</p>
+        <p><i class="fa-solid fa-envelope"></i> polycarpetuyishime@gmail.com</p>
+
+        <div class="socials">
+          <a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </aside>
+
+      <!-- RIGHT -->
+      <section class="contact-right">
+        <h2>Contact Me</h2>
+
+        <form class="contact-form" novalidate>
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Type Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
-  </div>
-        </main>
+  </main>
+
+  <script>
+    // menu.js - toggles mobile nav
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  if (!btn || !mobileNav) return;
+
+  function open() {
+    mobileNav.classList.add('show');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    btn.classList.add('open');
+  }
+  function close() {
+    mobileNav.classList.remove('show');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    btn.classList.remove('open');
+  }
+
+  btn.addEventListener('click', () => {
+    if (mobileNav.classList.contains('show')) close(); else open();
+  });
+
+  // close when clicking a link
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => close());
+  });
+});
+
+  </script>
 </body>
 </html>

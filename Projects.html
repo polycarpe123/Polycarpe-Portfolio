@@ -5,35 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script defer src="menu.js"></script>
     <title>Projects</title>
-
 </head>
-    <body>
-    <nav> 
-        <img src="/Filter photo.png" alt=""/>
-        <ul>
-            <li> <a href="Home.html">Home</a></li>
-            <li> <a href="About.html">About</a></li>
-            <li> <a style="color: cadetblue;" href="Projects.html">Projects</a></li>
-            <li> <a href="Skills.html">Skills</a></li>
-            <li> <a href="Experience.html">Experience</a></li>
-            <li> <a href="Blog.html">Blog</a></li>
-            <li> <a href="Contacts.html">Contacts</a></li>
-        </ul>
 
-        <div class="social-icons">
-    <a href=""><i class="fab fa-facebook-f"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin-in"></i></a>
-</div>
-    </nav>
-        <div class="text-wrapper">
-  <span class="big-text">PROJECTS</span>
-  <span class="small-text">Projects</span>
-  <span class="underline"></span>
+<body>
+
+<!-- ======================
+     UNIVERSAL NAVBAR
+======================== -->
+<nav class="navbar">
+    <div class="nav-header">
+        <img src="Filter photo.png" class="nav-profile" alt="Profile"/>
+        <h4 class="brand">POLYCARPE</h4>
+
+        <div id="hamburger" class="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a class="active" href="Projects.html">Projects</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Experience.html">Experience</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</nav>
+
+<!-- PAGE HEADING -->
+<div class="text-wrapper">
+    <span class="big-text">PROJECTS</span>
+    <span class="small-text">Projects</span>
+    <span class="underline"></span>
 </div>
 
-  <main class="projects-page">
+<!-- MAIN CONTENT -->
+<main class="projects-page">
 
     <h1 class="page-title">My Projects</h1>
 
@@ -41,30 +57,33 @@
 
         <div class="project-card">
             <h2 class="project-title">Personal Portfolio</h2>
-            <p class="project-description">
-                Explore more about my professional journey.
-            </p>
+            <p class="project-description">Explore more about my professional journey.</p>
             <a href="#" class="project-button">View Project</a>
         </div>
 
         <div class="project-card">
             <h2 class="project-title">E-commerce</h2>
-            <p class="project-description">
-                Explore more about our system.
-            </p>
+            <p class="project-description">Explore more about our system.</p>
             <a href="#" class="project-button">View Project</a>
         </div>
 
         <div class="project-card">
             <h2 class="project-title">Booking System</h2>
-            <p class="project-description">
-                Nothing beats a Jet2Holiday.
-            </p>
+            <p class="project-description">Nothing beats a Jet2Holiday.</p>
             <a href="#" class="project-button">View Project</a>
         </div>
 
     </div>
 
 </main>
+<script>
+    const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+
+</script>
 </body>
 </html>

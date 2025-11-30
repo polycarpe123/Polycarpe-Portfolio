@@ -6,69 +6,112 @@
     <link rel="stylesheet" href="Blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Blog</title>
-
 </head>
-    <body>
-    <nav> 
-        <img src="/Filter photo.png" alt=""/>
-        <ul>
-            <li> <a href="Home.html">Home</a></li>
-            <li> <a href="About.html">About</a></li>
-            <li> <a href="Projects.html">Projects</a></li>
-            <li> <a href="Skills.html">Skills</a></li>
-            <li> <a href="Experience.html">Experience</a></li>
-            <li> <a style="color: cadetblue;" href="Blog.html">Blog</a></li>
-            <li> <a href="Contacts.html">Contacts</a></li>
+<body>
+
+    <!-- ======== SIDEBAR NAVIGATION (DESKTOP) ======== -->
+    <nav class="sidebar">
+        <img src="Filter photo.png" alt="Profile"/>
+        <h4 class="brand">POLYCARPE</h4>
+
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a class="active" href="Blog.html">Blog</a></li>
+            <li><a href="Contacts.html">Contacts</a></li>
         </ul>
 
         <div class="social-icons">
-    <a href=""><i class="fab fa-facebook-f"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin-in"></i></a>
-</div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </nav>
-            <div class="text-wrapper">
-  <span class="big-text">BLOG</span>
-  <span class="small-text">Blog</span>
-  <span class="underline"></span>
-</div>
-    <main class="blog-page">
 
-    <div class="blog-grid">
+    <!-- ======== MOBILE NAVIGATION ======== -->
+    <header class="mobile-header">
+        <img src="Filter photo.png" class="mobile-profile" alt="Profile">
+        <h4 class="brand">POLYCARPE</h4>
 
-        <div class="blog-card">
-            <div class="blog-content">
-                <h2 class="blog-title">How I Built My Portfolio</h2>
-                <p class="blog-excerpt">
-                    A short overview of the process, challenges, and what I learned while creating my personal website.
-                </p>
-                <a href="#" class="blog-button">Read More</a>
+        <div class="mobile-right">
+            <div id="hamburger" class="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
 
-        <div class="blog-card">
+        <ul class="mobile-nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a class="active" href="Blog.html">Blog</a></li>
+            <li><a href="Contacts.html">Contacts</a></li>
+        </ul>
+    </header>
 
-            <div class="blog-content">
-                <h2 class="blog-title">Why I Chose Information Systems</h2>
-                <p class="blog-excerpt">
-                    Sharing my journey into tech, and how IS bridges business and technology.
-                </p>
-                <a href="#" class="blog-button">Read More</a>
-            </div>
+     <div class="nav-icons">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
         </div>
 
-        <div class="blog-card">
-            <div class="blog-content">
-                <h2 class="blog-title">Learning Frontend as a Beginner</h2>
-                <p class="blog-excerpt">
-                    My honest experience with HTML, CSS, JavaScript — and how I improved along the way.
-                </p>
-                <a href="#" class="blog-button">Read More</a>
-            </div>
-        </div>
-
+    <!-- ======== HEADER TEXT ======== -->
+    <div class="text-wrapper">
+        <span class="big-text">BLOG</span>
+        <span class="small-text">Blog</span>
+        <span class="underline"></span>
     </div>
 
-</main>
+    <!-- ======== MAIN CONTENT ======== -->
+    <main>
+        <div class="blog-grid">
+
+            <div class="blog-card">
+                <div class="blog-content">
+                    <h2 class="blog-title">How I Built My Portfolio</h2>
+                    <p class="blog-excerpt">
+                        A short overview of the process, challenges, and what I learned while creating my personal website.
+                    </p>
+                    <a href="#" class="blog-button">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-content">
+                    <h2 class="blog-title">Why I Chose Information Systems</h2>
+                    <p class="blog-excerpt">
+                        Sharing my journey into tech, and how IS bridges business and technology.
+                    </p>
+                    <a href="#" class="blog-button">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-content">
+                    <h2 class="blog-title">Learning Frontend as a Beginner</h2>
+                    <p class="blog-excerpt">
+                        My honest experience with HTML, CSS, JavaScript — and how I improved along the way.
+                    </p>
+                    <a href="#" class="blog-button">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ======== SCRIPT ======== -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.querySelector('.mobile-nav-links');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('show');
+        });
+    </script>
+
 </body>
 </html>

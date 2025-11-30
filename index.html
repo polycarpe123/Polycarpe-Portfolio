@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Polycarpe — Mobile Portfolio</title>
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+
+<!-- TOP NAV -->
+<header class="topbar">
+  <div class="brand">
+    <img src="Filter photo.png" alt="Polycarpe" class="brand-img">
+    <span class="brand-name">POLYCARPE</span>
+  </div>
+
+  <button class="menu-btn" aria-label="Toggle menu" id="menuBtn">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-links" id="mobileNav" aria-hidden="true">
+    <a href="#home" data-target="home">Home</a>
+    <a href="#about" data-target="about">About</a>
+    <a href="#projects" data-target="projects">Projects</a>
+    <a href="#skills" data-target="skills">Skills</a>
+    <a href="#experience" data-target="experience">Experience</a>
+    <a href="#blog" data-target="blog">Blog</a>
+    <a href="#contacts" data-target="contacts">Contacts</a>
+  </nav>
+</header>
+
+<main id="page">
+
+  <!-- HOME -->
+  <section id="home" class="section hero">
+    <div class="hero-inner">
+      <img src="Filter photo.png" alt="Profile" class="hero-photo">
+      <div class="hero-text">
+        <h2 class="small">Welcome,</h2>
+        <h1>I am Polycarpe</h1>
+        <div class="tag">I am a Designer</div>
+        <p class="location">Based in Nyarugenge, Kigali</p>
+        <a class="cta" href="Contacts.html">HIRE ME</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="heading">
+      <h2 class="bigback">ABOUT ME</h2>
+      <h3 class="smallcenter">Get To Know About Me</h3>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="card light">
+          <p>I am a UI/UX designer, and I will help you design your website at an affordable price.</p>
+        </div>
+        <div class="card light">
+          <p>Delivering work within time and budget which meets client’s requirements is my motto.</p>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="Profile.jpeg" alt="Profile photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="heading">
+      <h2 class="bigback">PROJECTS</h2>
+      <h3 class="smallcenter">Projects</h3>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <img src="projects/portfolio-thumb.jpg" alt="Portfolio thumbnail" class="thumb">
+        <h4>Personal Portfolio</h4>
+        <p>Explore more about my professional journey.</p>
+        <a class="link" href="Projects.html">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <img src="projects/ecommerce-thumb.jpg" alt="E-commerce thumbnail" class="thumb">
+        <h4>E-commerce</h4>
+        <p>Product management & checkout flows.</p>
+        <a class="link" href="Projects.html">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <img src="projects/booking-thumb.jpg" alt="Booking thumbnail" class="thumb">
+        <h4>Booking System</h4>
+        <p>Booking and reservation UI with calendar.</p>
+        <a class="link" href="Projects.html">View Project</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="heading">
+      <h2 class="bigback">SKILLS</h2>
+      <h3 class="smallcenter">My Expertise</h3>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Design</h4>
+        <div class="meter"><span style="width:70%"></span></div><p>Figma</p>
+        <div class="meter"><span style="width:80%"></span></div><p>Canva</p>
+        <div class="meter"><span style="width:50%"></span></div><p>Framer</p>
+      </div>
+
+      <div class="skill-card">
+        <h4>Web Dev</h4>
+        <div class="meter"><span style="width:70%"></span></div><p>HTML</p>
+        <div class="meter"><span style="width:60%"></span></div><p>CSS</p>
+        <div class="meter"><span style="width:40%"></span></div><p>JavaScript</p>
+      </div>
+
+      <div class="tools-card">
+        <h4>Tools</h4>
+        <div class="tools-logos">
+          <img src="Logo/icons8-canva-48.png" alt="Canva">
+          <img src="Logo/adobe.png" alt="Adobe">
+          <img src="Logo/photoshop (1).png" alt="Photoshop">
+          <img src="Logo/figma (1).png" alt="Figma">
+          <img src="Logo/wix.png" alt="Wix">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="heading">
+      <h2 class="bigback">EXPERIENCE</h2>
+      <h3 class="smallcenter">My Journey</h3>
+    </div>
+
+    <div class="experience-grid">
+      <div class="exp-card">
+        <h4>Software Developer Intern</h4>
+        <p class="company">Tech Solutions Ltd</p>
+        <ul><li>Developed web modules using HTML/CSS/JS</li><li>Integrated APIs</li></ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>IT Support Assistant</h4>
+        <p class="company">Global Enterprises</p>
+        <ul><li>Technical support for staff</li><li>Network troubleshooting</li></ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>Freelance Web Developer</h4>
+        <p class="company">Self-employed</p>
+        <ul><li>Responsive websites for small businesses</li><li>SEO & performance improvements</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section">
+    <div class="heading">
+      <h2 class="bigback">BLOG</h2>
+      <h3 class="smallcenter">Blog</h3>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card">
+        <h4>How I Built My Portfolio</h4>
+        <p>A short overview of the process, challenges and lessons learned.</p>
+        <a class="link" href="Blog.html">Read More</a>
+      </article>
+
+      <article class="blog-card">
+        <h4>Why I Chose Information Systems</h4>
+        <p>A personal view about IS and the bridge between business & tech.</p>
+        <a class="link" href="Blog.html">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="section">
+    <div class="heading">
+      <h2 class="bigback">CONTACTS</h2>
+      <h3 class="smallcenter">Get In Touch</h3>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h4>Address</h4>
+        <p><i class="fa-solid fa-location-dot"></i> KN145ST, Nyarugenge, Kigali</p>
+        <p><i class="fa-solid fa-phone"></i> +250 789 915 504</p>
+        <p><i class="fa-solid fa-envelope"></i> polycarpetuyishime@gmail.com</p>
+        <div class="socials">
+          <a href="#"><img src="icons/facebook.svg" alt=""></a>
+          <a href="#"><img src="icons/twitter.svg" alt=""></a>
+          <a href="#"><img src="icons/linkedin.svg" alt=""></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h4>Contact Me</h4>
+        <form>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Type your message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="menu.js"></script>
+</body>
+</html>

@@ -1,39 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
-<body background="/211080.jpg" alt="">
-   
-    <nav> 
-        <img src="/Filter photo.png" alt=""/>
-        <ul>
-            <li> <a style="color: cadetblue;" href="C:\Users\USER1\Desktop\Git Project\Home.html">Home</a></li>
-            <li> <a href="About.html">About</a></li>
-            <li> <a href="Projects.html">Projects</a></li>
-            <li> <a href="Skills.html">Skills</a></li>
-            <li> <a href="Experience.html">Experience</a></li>
-            <li> <a href="Blog.html">Blog</a></li>
-            <li> <a href="Contacts.html">Contacts</a></li>
+
+<body>
+
+    <!-- ========== SIDEBAR (DESKTOP) ========== -->
+    <nav class="sidebar">
+        <img src="Filter photo.png" alt="Profile"/>
+        <h4 class="brand">POLYCARPE</h4>
+
+        <ul class="nav-links">
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contacts.html">Contacts</a></li>
         </ul>
 
         <div class="social-icons">
-    <a href=""><i class="fab fa-facebook-f"></i></a>
-    <a href=""><i class="fab fa-twitter"></i></a>
-    <a href=""><i class="fab fa-linkedin-in"></i></a>
-</div>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </nav>
 
-<main class="content">
-<h2>Welcome,</h2>
-<h1>I am Polycarpe</div> </h1>
-<h2 style="background-color: black; border-radius: 40px; display: inline-block; padding: 15px;">I am a Designer</h2>
-<h5>Based in Nyarugenge, Kigali</h5>
-<a href="C:\Users\USER1\Desktop\Git Project\Contacts.html"><button><b>HIRE ME</b></button></a>
-</main>
+
+    <!-- ========== MOBILE NAVIGATION ========== -->
+    <header class="mobile-header">
+        <img src="Filter photo.png" class="mobile-profile">
+
+        <h3 class="brand">POLYCARPE</h3>
+
+        <div id="hamburger" class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contacts.html">Contacts</a></li>
+        </ul>
+    </header>
+
+
+
+    <!-- ========== HEADING ========== -->
+    <div class="text-wrapper">
+        <span class="big-text">WELCOME</span>
+        <span class="small-text">I Am Polycarpe</span>
+        <span class="underline"></span>
+    </div>
+
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="home-content">
+
+        <h2 class="tagline designer-tag">I Am A Designer</h2>
+        <h5 class="location">Based in Nyarugenge, Kigali</h5>
+
+        <a href="Contacts.html">
+            <button class="hire-btn"><b>HIRE ME</b></button>
+        </a>
+
+    </main>
+
+
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.querySelector(".mobile-nav-links");
+
+    hamburger.addEventListener("click", () => {
+        mobileNav.classList.toggle("show");
+    });
+</script>
 
 </body>
 </html>
