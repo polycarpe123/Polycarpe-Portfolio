@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
-
-    <link rel="stylesheet" href="_experience.css"/>
+    <title>Experience - POLYCARPE</title>
+    <link rel="stylesheet" type="text/css" href="_experience.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+   
 </head>
 
 <body>
-
-    <!-- TOP NAVBAR -->
+    <!-- DESKTOP NAVBAR -->
     <nav class="navbar">
         <img src="Filter photo.png" alt="Profile"/>
         <h4 class="brand">POLYCARPE</h4>
@@ -27,27 +26,24 @@
         </ul>
 
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-
-        <div class="hamburger">
-            <i class="fa fa-bars"></i>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
-      <header class="mobile-header">
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
         <img src="Filter photo.png" alt="Profile" class="mobile-profile"/>
-
-      <div class="mobile-right">
-            <div id="hamburger" class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+    </header>
 
-    <div class="mobile-menu">
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
         <a href="Home.html">Home</a>
         <a href="About.html">About</a>
         <a href="Projects.html">Projects</a>
@@ -56,13 +52,13 @@
         <a href="Blog.html">Blog</a>
         <a href="Contacts.html">Contacts</a>
     </div>
-      </header>
 
+    <!-- MOBILE SOCIAL ICONS -->
     <div class="nav-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-        </div>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
 
     <!-- HEADER TEXT -->
     <div class="text-wrapper">
@@ -76,14 +72,13 @@
         <h1 class="page-title">My Experience</h1>
 
         <div class="experience-grid">
-
             <div class="experience-card">
                 <h2>Software Developer Intern</h2>
                 <p class="company">Tech Solutions Ltd</p>
                 <ul>
-                    <li>Developed UI components using HTML, CSS & JavaScript.</li>
-                    <li>Integrated REST APIs into internal dashboards.</li>
-                    <li>Participated in daily standups and sprint planning.</li>
+                    <li>Developed UI components using HTML, CSS & JavaScript</li>
+                    <li>Integrated REST APIs into internal dashboards</li>
+                    <li>Participated in daily standups and sprint planning</li>
                 </ul>
             </div>
 
@@ -91,9 +86,9 @@
                 <h2>IT Support Assistant</h2>
                 <p class="company">Global Enterprises</p>
                 <ul>
-                    <li>Provided troubleshooting assistance for over 200 staff.</li>
-                    <li>Maintained internal documentation and IT policies.</li>
-                    <li>Supported network upgrades and installations.</li>
+                    <li>Provided troubleshooting assistance for over 200 staff</li>
+                    <li>Maintained internal documentation and IT policies</li>
+                    <li>Supported network upgrades and installations</li>
                 </ul>
             </div>
 
@@ -101,22 +96,28 @@
                 <h2>Freelance Web Developer</h2>
                 <p class="company">Self-employed</p>
                 <ul>
-                    <li>Created responsive websites for clients.</li>
-                    <li>Improved SEO and loading performance.</li>
-                    <li>Managed hosting, domain setup and ongoing maintenance.</li>
+                    <li>Created responsive websites for clients</li>
+                    <li>Improved SEO and loading performance</li>
+                    <li>Managed hosting, domain setup and ongoing maintenance</li>
                 </ul>
             </div>
-
         </div>
     </main>
 
-<script>
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    hamburger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("show");
-    });
-</script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
