@@ -1,126 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contacts - Polycarpe</title>
-  <link rel="stylesheet" href="_contacts.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - POLYCARPE</title>
+    <link rel="stylesheet" href="/_contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
+
 <body>
+    <!-- DESKTOP NAVBAR -->
+    <nav class="navbar">
+        <img src="/Filter photo.png" alt="Profile"/>
+        <h4 class="brand">POLYCARPE</h4>
 
-  <!-- DESKTOP SIDEBAR -->
-  <nav class="sidebar">
-    <img src="Filter photo.png" alt="Profile" class="sidebar-photo" />
-    <h4 class="brand">POLYCARPE</h4>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Experience.html">Experience</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a class="active" href="Contacts.html">Contacts</a></li>
+        </ul>
 
-    <ul class="nav-links">
-      <li><a href="Home.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Projects.html">Projects</a></li>
-      <li><a href="Skills.html">Skills</a></li>
-      <li><a href="Experience.html">Experience</a></li>
-      <li><a href="Blog.html">Blog</a></li>
-      <li><a class="active" href="Contacts.html">Contacts</a></li>
-    </ul>
-
-    <div class="sidebar-socials">
-      <a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-  </nav>
-
-  <!-- MOBILE HEADER -->
-  <header class="mobile-header">
-    <div class="mobile-left">
-      <img src="Filter photo.png" alt="Profile" class="mobile-photo"/>
-      <span class="brand">POLYCARPE</span>
-    </div>
-
-    <button id="hamburger" class="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- MOBILE NAV (hidden by default, toggled by JS) -->
-  <ul class="mobile-nav-links" id="mobileNav" aria-hidden="true">
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="Projects.html">Projects</a></li>
-    <li><a href="Skills.html">Skills</a></li>
-    <li><a href="Experience.html">Experience</a></li>
-    <li><a href="Blog.html">Blog</a></li>
-    <li><a class="active" href="Contacts.html">Contacts</a></li>
-  </ul>
-
- 
-  <section class="page-title">
-    <h1>CONTACTS</h1>
-    <p>Get in Touch</p>
-  </section>
-
-
-  <main class="contact-section" id="contacts">
-    <div class="contact-container">
-
-      <!-- LEFT -->
-      <aside class="contact-left">
-        <h2>Address</h2>
-        <p><i class="fa-solid fa-location-dot"></i> KN145ST, Nyarugenge, Kigali</p>
-        <p><i class="fa-solid fa-phone"></i> +250 789 915 504</p>
-        <p><i class="fa-solid fa-envelope"></i> polycarpetuyishime@gmail.com</p>
-
-        <div class="socials">
-          <a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
-      </aside>
+    </nav>
 
-      <!-- RIGHT -->
-      <section class="contact-right">
-        <h2>Contact Me</h2>
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+        <img src="Filter photo.png" alt="Profile" class="mobile-profile"/>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-        <form class="contact-form" novalidate>
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Type Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Blog.html">Blog</a>
+        <a class="active" href="Contacts.html">Contacts</a>
     </div>
-  </main>
 
-  <script>
-    // menu.js - toggles mobile nav
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
+    <!-- MOBILE SOCIAL ICONS -->
+    <div class="nav-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
 
-  if (!btn || !mobileNav) return;
+    <!-- HEADER TEXT -->
+    <div class="text-wrapper">
+        <span class="big-text">CONTACTS</span>
+        <span class="small-text">Get in Touch</span>
+        <span class="underline"></span>
+    </div>
 
-  function open() {
-    mobileNav.classList.add('show');
-    mobileNav.setAttribute('aria-hidden', 'false');
-    btn.classList.add('open');
-  }
-  function close() {
-    mobileNav.classList.remove('show');
-    mobileNav.setAttribute('aria-hidden', 'true');
-    btn.classList.remove('open');
-  }
+    <!-- MAIN CONTENT -->
+    <main class="contact-section">
+        <div class="contact-container">
+            <!-- LEFT - Contact Info -->
+            <aside class="contact-left">
+                <h2>Address</h2>
+                
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>KN145ST, Nyarugenge, Kigali</p>
+                </div>
 
-  btn.addEventListener('click', () => {
-    if (mobileNav.classList.contains('show')) close(); else open();
-  });
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+250 789 915 504</p>
+                </div>
 
-  // close when clicking a link
-  mobileNav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => close());
-  });
-});
+                <div class="contact-info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>polycarpetuyishime@gmail.com</p>
+                </div>
 
-  </script>
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </aside>
+
+            <!-- RIGHT - Contact Form -->
+            <section class="contact-right">
+                <h2>Contact Me</h2>
+
+                <form class="contact-form" novalidate>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Type Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Form submission handler (optional)
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            form.reset();
+        });
+    </script>
 </body>
 </html>

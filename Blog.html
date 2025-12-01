@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_blog.css"/>
+    <title>Blog - POLYCARPE</title>
+    <link rel="stylesheet" href="/_blog.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <title>Blog</title>
-</head>
-<body>
 
-    <!-- ======== SIDEBAR NAVIGATION (DESKTOP) ======== -->
-    <nav class="sidebar">
-        <img src="Filter photo.png" alt="Profile"/>
+</head>
+
+<body>
+    <!-- DESKTOP NAVBAR -->
+    <nav class="navbar">
+        <img src="/Filter photo.png" alt="Profile"/>
         <h4 class="brand">POLYCARPE</h4>
 
         <ul class="nav-links">
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Projects.html">Projects</a></li>
             <li><a href="Skills.html">Skills</a></li>
@@ -25,93 +26,130 @@
         </ul>
 
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </nav>
 
-    <!-- ======== MOBILE NAVIGATION ======== -->
+    <!-- MOBILE HEADER -->
     <header class="mobile-header">
-        <img src="Filter photo.png" class="mobile-profile" alt="Profile">
-        <h4 class="brand">POLYCARPE</h4>
-
-        <div class="mobile-right">
-            <div id="hamburger" class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+        <img src="Filter photo.png" alt="Profile" class="mobile-profile"/>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-
-        <ul class="mobile-nav-links">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Experience.html">Experience</a></li>
-            <li><a class="active" href="Blog.html">Blog</a></li>
-            <li><a href="Contacts.html">Contacts</a></li>
-        </ul>
     </header>
 
-     <div class="nav-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-        </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a class="active" href="Blog.html">Blog</a>
+        <a href="Contacts.html">Contacts</a>
+    </div>
 
-    <!-- ======== HEADER TEXT ======== -->
+    <!-- MOBILE SOCIAL ICONS -->
+    <div class="nav-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- HEADER TEXT -->
     <div class="text-wrapper">
         <span class="big-text">BLOG</span>
-        <span class="small-text">Blog</span>
+        <span class="small-text">My Thoughts</span>
         <span class="underline"></span>
     </div>
 
-    <!-- ======== MAIN CONTENT ======== -->
+    <!-- MAIN CONTENT -->
     <main>
-        <div class="blog-grid">
+        <div class="blog-container">
+            <h1 class="page-title">Latest Posts</h1>
 
-            <div class="blog-card">
-                <div class="blog-content">
-                    <h2 class="blog-title">How I Built My Portfolio</h2>
-                    <p class="blog-excerpt">
-                        A short overview of the process, challenges, and what I learned while creating my personal website.
-                    </p>
-                    <a href="#" class="blog-button">Read More</a>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            Dec 1, 2024
+                        </span>
+                        <span class="blog-category">Tutorial</span>
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">How I Built My Portfolio</h2>
+                        <p class="blog-excerpt">
+                            A short overview of the process, challenges, and what I learned while creating my personal website using HTML, CSS, and JavaScript.
+                        </p>
+                        <a href="#" class="blog-button">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 28, 2024
+                        </span>
+                        <span class="blog-category">Career</span>
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Why I Chose Information Systems</h2>
+                        <p class="blog-excerpt">
+                            Sharing my journey into tech, and how Information Systems bridges the gap between business and technology in today's world.
+                        </p>
+                        <a href="#" class="blog-button">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 20, 2024
+                        </span>
+                        <span class="blog-category">Learning</span>
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Learning Frontend as a Beginner</h2>
+                        <p class="blog-excerpt">
+                            My honest experience with HTML, CSS, JavaScript — and how I improved along the way. Tips for anyone starting their frontend journey.
+                        </p>
+                        <a href="#" class="blog-button">
+                            Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <div class="blog-card">
-                <div class="blog-content">
-                    <h2 class="blog-title">Why I Chose Information Systems</h2>
-                    <p class="blog-excerpt">
-                        Sharing my journey into tech, and how IS bridges business and technology.
-                    </p>
-                    <a href="#" class="blog-button">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-content">
-                    <h2 class="blog-title">Learning Frontend as a Beginner</h2>
-                    <p class="blog-excerpt">
-                        My honest experience with HTML, CSS, JavaScript — and how I improved along the way.
-                    </p>
-                    <a href="#" class="blog-button">Read More</a>
-                </div>
-            </div>
-
         </div>
     </main>
 
-    <!-- ======== SCRIPT ======== -->
     <script>
         const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.querySelector('.mobile-nav-links');
-
+        const mobileMenu = document.getElementById('mobile-menu');
+        
         hamburger.addEventListener('click', () => {
-            mobileNav.classList.toggle('show');
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
         });
     </script>
-
 </body>
 </html>

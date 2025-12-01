@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills</title>
-
-    <link rel="stylesheet" href="_skills.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - POLYCARPE</title>
+    <link rel="stylesheet" href="/_skills.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        
+    </style>
 </head>
 
 <body>
-
-    <!-- SIDEBAR NAVBAR / TOP NAV (RESPONSIVE) -->
+    <!-- DESKTOP NAVBAR -->
     <nav class="navbar">
-
-        <img src="Filter photo.png" alt="">
+        <img src="/Filter photo.png" alt="Profile"/>
         <h4 class="brand">POLYCARPE</h4>
 
         <ul class="nav-links">
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Projects.html">Projects</a></li>
             <li><a class="active" href="Skills.html">Skills</a></li>
@@ -27,22 +27,26 @@
             <li><a href="Contacts.html">Contacts</a></li>
         </ul>
 
-        <div class="nav-icons">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
-
-        <!-- HAMBURGER -->
-        <div class="hamburger">
-            <i class="fa fa-bars"></i>
-        </div>
-
     </nav>
 
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+        <img src="Filter photo.png" alt="Profile" class="mobile-profile"/>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
     <!-- MOBILE MENU -->
-    <div class="mobile-menu">
-        <a href="Home.html">Home</a>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
         <a href="About.html">About</a>
         <a href="Projects.html">Projects</a>
         <a class="active" href="Skills.html">Skills</a>
@@ -51,73 +55,152 @@
         <a href="Contacts.html">Contacts</a>
     </div>
 
+    <!-- MOBILE SOCIAL ICONS -->
+    <div class="nav-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
     <!-- HEADER TEXT -->
     <div class="text-wrapper">
         <span class="big-text">SKILLS</span>
-        <span class="small-text">My Expertise</span>
+        <span class="small-text">What I Know</span>
         <span class="underline"></span>
     </div>
 
     <!-- MAIN CONTENT -->
     <main class="skills-section">
+        <h1 class="section-title">My Skills</h1>
 
         <div class="skills-row">
-
-            <!-- CARD 1 -->
+            <!-- Design Tools -->
             <div class="skill-card">
-                <h3>Design:</h3>
-
-                <p>Figma:</p>
-                <div class="progress-bar"><div class="fill figma"></div></div>
-
-                <p>Canva:</p>
-                <div class="progress-bar"><div class="fill canva"></div></div>
-
-                <p>Framer:</p>
-                <div class="progress-bar"><div class="fill framer"></div></div>
+                <h3>Figma</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Interface Design</span>
+                    <span class="skill-percentage">70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill figma" data-progress="70%"></div>
+                </div>
             </div>
 
-            <!-- CARD 2 -->
             <div class="skill-card">
-                <h3>Web Development:</h3>
-
-                <p>HTML:</p>
-                <div class="progress-bar"><div class="fill html"></div></div>
-
-                <p>CSS:</p>
-                <div class="progress-bar"><div class="fill css"></div></div>
-
-                <p>JavaScript:</p>
-                <div class="progress-bar"><div class="fill js"></div></div>
+                <h3>Canva</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Graphic Design</span>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill canva" data-progress="80%"></div>
+                </div>
             </div>
 
+            <div class="skill-card">
+                <h3>Framer</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Prototyping</span>
+                    <span class="skill-percentage">50%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill framer" data-progress="50%"></div>
+                </div>
+            </div>
+
+            <!-- Development Skills -->
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Markup Language</span>
+                    <span class="skill-percentage">70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill html" data-progress="70%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Styling & Layout</span>
+                    <span class="skill-percentage">60%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill css" data-progress="60%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <div class="skill-info">
+                    <span class="skill-name">Programming</span>
+                    <span class="skill-percentage">40%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="fill js" data-progress="40%"></div>
+                </div>
+            </div>
         </div>
 
-        <!-- TOOLS CARD -->
+        <!-- TOOLS SECTION -->
         <div class="tools-card">
-            <h3>Tools:</h3>
+            <h2>Tools & Technologies</h2>
             <div class="tools-logos">
-                <img src="Logo/icons8-canva-48.png" alt="">
-                <img src="Logo/adobe.png" alt="">
-                <img src="Logo/photoshop (1).png" alt="">
-                <img src="Logo/figma (1).png" alt="">
-                <img src="Logo/wix.png" alt="">
-                <img src="Logo/squarespace.png" alt="">
-                <img src="Logo/dreamweaver (1).png" alt="">
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>
+                    <span class="tool-name">Figma</span>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva"/>
+                    <span class="tool-name">Canva</span>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>
+                    <span class="tool-name">HTML5</span>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/>
+                    <span class="tool-name">CSS3</span>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                    <span class="tool-name">JavaScript</span>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+                    <span class="tool-name">Git</span>
+                </div>
             </div>
         </div>
-
     </main>
 
-    <!-- JS FOR HAMBURGER -->
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const mobileMenu = document.querySelector(".mobile-menu");
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
 
-        hamburger.addEventListener("click", () => {
-            mobileMenu.classList.toggle("show");
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Animate progress bars on page load
+        window.addEventListener('load', () => {
+            const fills = document.querySelectorAll('.fill');
+            fills.forEach(fill => {
+                const width = fill.style.width || fill.className.match(/\d+/)?.[0] + '%';
+                fill.style.width = '0';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 100);
+            });
         });
     </script>
-
 </body>
 </html>
