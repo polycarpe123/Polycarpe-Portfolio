@@ -204,10 +204,6 @@
             left: 100%;
         }
 
-        .experience-section{
-            padding: 120px;
-        }
-
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
