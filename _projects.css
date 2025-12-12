@@ -128,7 +128,7 @@ body {
    HEADER TEXT
 ======================== */
 .text-wrapper {
-    margin: 80px auto 40px auto;
+    margin: 40px auto 40px auto;
     text-align: center;
     position: relative;
     width: fit-content;
@@ -165,18 +165,17 @@ body {
    PROJECTS SECTION
 ======================== */
 main {
-    margin-left: 240px;
-    padding: 20px 40px 60px;
+    padding: 100px 40px 60px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .projects-page {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 30px 0;
-    width: 100%;
+    width: 85%;
 }
 
 .page-title {
@@ -385,6 +384,8 @@ main {
 /* ========================
    RESPONSIVE DESIGN
 ======================== */
+
+/* Tablets and below (900px and smaller) */
 @media (max-width: 900px) {
     .navbar {
         display: none;
@@ -446,6 +447,8 @@ main {
         left: 0;
         z-index: 999;
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
     }
 
     .mobile-menu a {
@@ -495,8 +498,8 @@ main {
 
     main {
         margin-left: 0;
-        padding: 20px 20px 80px;
         margin-top: 70px;
+        padding: 20px 20px 80px;
     }
 
     .text-wrapper {
@@ -517,9 +520,8 @@ main {
     }
 
     .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .project-image {
@@ -527,7 +529,39 @@ main {
     }
 }
 
+/* Tablet landscape - 2 columns */
+@media (min-width: 601px) and (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Small phones */
 @media (max-width: 480px) {
+    .mobile-header {
+        height: 60px;
+        padding: 0 15px;
+    }
+    
+    .mobile-profile {
+        height: 45px;
+        width: 45px;
+    }
+
+    .mobile-menu {
+        top: 60px;
+    }
+    
+    main {
+        margin-top: 60px;
+        padding: 15px 15px 75px;
+    }
+    
+    .text-wrapper {
+        margin: 30px auto 25px;
+    }
+    
     .big-text {
         font-size: 45px;
     }
@@ -538,11 +572,16 @@ main {
 
     .underline {
         width: 100px;
+        height: 4px;
     }
 
     .page-title {
         font-size: 1.4rem;
         padding: 8px 16px;
+    }
+
+    .projects-page {
+        padding: 20px 0;
     }
 
     .project-content {
@@ -557,41 +596,51 @@ main {
         height: 180px;
     }
 
-    main {
-        padding: 15px 15px 80px;
-    }
-
-    .projects-page {
-    padding: 20px 0;
-}
-
     .project-button {
         width: 100%;
     }
-}
-
-/* Tablet landscape */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Tablet portrait */
-@media (max-width: 768px) and (min-width: 481px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+    
+    .nav-icons {
+        padding: 12px;
     }
     
-    .project-image {
-        height: 200px;
+    .nav-icons a {
+        font-size: 20px;
     }
 }
 
-/* Small tablets */
-@media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
+/* Extra small phones */
+@media (max-width: 374px) {
+    .big-text {
+        font-size: 38px;
+    }
+
+    .small-text {
+        font-size: 18px;
+    }
+
+    .underline {
+        width: 90px;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+        padding: 7px 14px;
+    }
+
+    .project-content {
+        padding: 18px 20px 20px;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .project-image {
+        height: 160px;
     }
 }
