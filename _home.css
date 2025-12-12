@@ -183,7 +183,7 @@
            HOME CONTENT
         ======================== */
         main {
-            margin-left: 240px;
+            margin-left: 60px;
             padding: 20px 40px 60px;
             min-height: calc(100vh - 300px);
             display: flex;
