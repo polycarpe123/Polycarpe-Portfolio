@@ -457,12 +457,12 @@
 
             main {
                 margin-left: 0;
-                padding: 20px 20px 80px;
                 margin-top: 70px;
+                padding: 20px 20px 80px;
             }
 
             .text-wrapper {
-                margin: 40px auto 30px;
+                margin: 90px auto 30px;
             }
 
             .big-text {
@@ -515,7 +515,7 @@
             }
 
             main {
-                padding: 15px 15px 80px;
+                padding: 12px 12px 80px;
             }
 
             .picture::after {
