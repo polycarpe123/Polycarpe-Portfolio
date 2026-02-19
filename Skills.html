@@ -66,7 +66,7 @@
     <!-- HEADER TEXT -->
     <div class="text-wrapper">
         <span class="big-text">SKILLS</span>
-        <span class="small-text">What I Know</span>
+        <span class="small-text">My Expertise</span>
         <span class="underline"></span>
     </div>
 
@@ -195,11 +195,14 @@
         window.addEventListener('load', () => {
             const fills = document.querySelectorAll('.fill');
             fills.forEach(fill => {
-                const width = fill.style.width || fill.className.match(/\d+/)?.[0] + '%';
-                fill.style.width = '0';
+                // Get target width from the data-progress attribute
+                const targetWidth = fill.getAttribute('data-progress');
+                // Start from 0%
+                fill.style.width = '0%';
+                // Animate to target width after a short delay
                 setTimeout(() => {
-                    fill.style.width = width;
-                }, 100);
+                    fill.style.width = targetWidth;
+                }, 300);
             });
         });
     </script>

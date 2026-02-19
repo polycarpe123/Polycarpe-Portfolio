@@ -118,6 +118,43 @@
     </div>
     </main>
 
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Message Sent Successfully!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for reaching out! Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal('successModal')">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERROR MODAL -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon error-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h3>Message Failed to Send</h3>
+            </div>
+            <div class="modal-body">
+                <p>Oops! Something went wrong while sending your message. Please try again or email me directly at:</p>
+                <p class="email-direct">polycarpetuyishime@gmail.com</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal('errorModal')">Try Again</button>
+            </div>
+        </div>
+    </div>
+
     <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -126,12 +163,44 @@
         mobileMenu.classList.toggle('show');
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove('show');
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        // Modal functions
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
         }
-    });
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal.show');
+                modals.forEach(modal => {
+                    modal.classList.remove('show');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
 
     // Form submission with validation and EmailJS
     const form = document.querySelector('.contact-form');
@@ -143,15 +212,8 @@
         const email = form.email.value.trim();
         const message = form.message.value.trim();
 
-        // Validation
-        if (!name) {
-            alert('Please enter your name');
-            form.name.focus();
-            return;
-        }
-
+        // Validation - only check email format, let HTML5 required handle empty fields
         if (!email) {
-            alert('Please enter your email');
             form.email.focus();
             return;
         }
@@ -159,13 +221,12 @@
         // Basic email format validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address');
+            showModal('errorModal');
             form.email.focus();
             return;
         }
 
         if (!message) {
-            alert('Please enter your message');
             form.message.focus();
             return;
         }
@@ -184,13 +245,13 @@
         };
 
         // Using EmailJS (free email service)
-        emailjs.send('service_scbqa9l', 'template_b0sdcwj', formData)
+        emailjs.send('service_scbqa9l', 'template_055tjem', formData)
             .then(() => {
-                alert('Thank you for your message! I will get back to you soon.');
+                showModal('successModal');
                 form.reset();
             })
             .catch((error) => {
-                alert('Oops! Something went wrong. Please try again or email me directly at polycarpetuyishime@gmail.com');
+                showModal('errorModal');
                 console.error('Error:', error);
             })
             .finally(() => {
